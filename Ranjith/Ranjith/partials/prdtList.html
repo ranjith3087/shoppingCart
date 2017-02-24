@@ -1,0 +1,23 @@
+<br/>
+<div class="col-md-12">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>SI.NO</td>
+				<td>Product Name</td>
+				<td>Product Code</td>
+				<td>Product Price</td>
+				<td>Product Description</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="prdt in prdtList">
+				<td>{{$index + 1}}</td>
+				<td>{{prdt.name}}</td>
+				<td>{{prdt.code}}</td>
+				<td>{{prdt.price}}</td>
+				<td>{{prdt.description}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

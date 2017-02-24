@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html ng-app="calculatorApp">
+<head >
+<link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body class="container-fluid col-md-offset-1 col-md-10 col-md-offset-1" >
+<div ng-controller="calCntrl">
+First Number <input type="number" ng-model="firstNum"/>
+Second Number <input type="number" ng-model="secondNum"/>
+<div class="well">
+Summation of two number is {{result}}
+</div>
+
+<button class="btn btn-primary" ng-click="summation()">Add</button>
+</div>
+<script src="js/angular.1.4.js"></script>
+<script src="js/testingmodule.js"></script>
+
+</body>
+</head>
+</html>

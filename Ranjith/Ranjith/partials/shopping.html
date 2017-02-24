@@ -1,0 +1,59 @@
+<div ng-controller="shoppingCntrl" class="col-md-6">
+<br/>
+<div class="well">
+	Enter Search text :
+	<input ng-model="srchTxt" type="text"></input>
+</div>
+<table class="table table-striped">
+<caption>Product List</caption>
+	<thead>
+		<tr>
+		<td>SI.No</td>
+		<td>Name</td>
+		<td>Price</td>
+		<td>Code</td>
+		<td>Add</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="prdt in productList | filter:srchTxt">
+		<td>{{$index + 1}}</td>
+		<td>{{prdt.name | captilizing : 2}}</td>
+		<td>{{prdt.price | currency:'$'}}</td>
+		<td>{{prdt.code}}</td>
+		<td><button ng-click="choosenPrdts($index)" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span>Add</button></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div ng-controller="cartCntrl" class="col-md-6" ng-show="selPrtList.length">
+	
+	<table class="table table-bordered">
+	<caption>{{tabTilte}}</caption>
+	<thead>
+		<tr>
+		<td></td>
+		<td>Name</td>
+		<td>Price</td>
+		<td>Quantity</td>
+		<td>TotalPrice</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="selprdt in selPrtList">
+			<td><button ng-click="removeSelectedItem($index)" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>
+			<td>{{selprdt.name}}</td>
+			<td>{{selprdt.price}}</td>
+			<td><input type="number" ng-model="selprdt.qty"></td>
+			<td>{{selprdt.qty * selprdt.price}}</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="4">Final Cost</td>
+			<td>{{finalTotalCost()}}</td>
+		</tr>
+	</tfoot>
+</table>
+</div>

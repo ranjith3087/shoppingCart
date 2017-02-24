@@ -1,0 +1,82 @@
+<div class="container col-md-8" >
+	<form class="form-horizontal" name="prdtdetails" role="form">
+		
+		<fieldset class="scheduler-border">
+		    <legend class="scheduler-border">New Product</legend>
+			<div class="form-group">
+				<label for="productName" class="control-label col-sm-4"> Product Name: </label>
+				<div class="col-sm-8">
+					<input ng-model="newPrdtDetails.name" required id="productName" class="form-control" minlength="3" maxlength="6" name="prdtName" />
+					<div ng-messages="prdtdetails.prdtName.$error">
+					<span ng-message="required">This is required fields</span>
+					<span ng-message="minlength">Product Name should be atleast 3 characters </span>
+					</div>
+				</div>
+			</div>
+
+			 <div class="form-group">
+				<label for="prdtDes" class="control-label col-sm-4"> Product Description: </label>
+				<div class="col-sm-8">
+					<textarea id="productDesc" ng-model="newPrdtDetails.description" class="form-control " name="prdtDescr"></textarea>
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="prdtPrice" class="control-label col-sm-4"> Product Price: </label>
+				<div class="col-sm-8">
+					<input id="prdtPrice" ng-model="newPrdtDetails.price" type="number" name="prdtPrice" required min="10000" max="100000"class="form-control"></input>
+					
+				</div>
+			</div>
+
+			<div class="form-group">
+				 <label  class="control-label col-sm-4">Product Warenty: </label>
+				<div class="col-sm-8">
+					<label class="radio-inline">
+						<input type="radio" value="false"   />No
+					</label>
+					<label class="radio-inline">
+						<input type="radio" value="true"   />Yes
+					</label>
+			    </div>
+			</div>
+
+			<div class="form-group">
+				<label  class="control-label col-sm-4"> Product Category: </label>
+				<div class="col-sm-8">
+					<select id="prdtCategory" ng-model="newPrdtDetails.category" class="form-control" name="prdtCategory">
+						<option value="select">select</option>
+						<option value="home">Home appliances</option>
+						<option value="mobile">Mobiles</option>
+						<option value="other">other</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="prdtcode" class="control-label col-sm-4"> Product Code</label>
+				<div class="col-sm-8">
+					<input id="prdtcode"  ng-model="newPrdtDetails.code" class="form-control" name="prdtCode" ></input>
+					
+					
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary pull-right" ng-disabled="prdtdetails.$invalid" value="Add product"></input>
+			</div> 
+
+		</fieldset>
+	</form>
+</div>
+<div class="col-md-4" >
+<!-- Product Details : {{prdtdetails | json}} -->
+<pre>{{prdtdetails.prdtName | json}}</pre>
+<!-- <pre>{{prdtdetails | json}}</pre> -->
+<!-- <pre>prdtdetails.$error:{{prdtdetails.$error | json}}</pre> -->
+<pre>prdtdetails.$pristine:{{prdtdetails.$pristine}}</pre>
+<pre>prdtdetails.$dirty:{{prdtdetails.$dirty}}</pre>
+<pre>prdtdetails.$valid:{{prdtdetails.$valid}}</pre>
+<pre>prdtdetails.$invalid:{{prdtdetails.$invalid}}</pre>
+</div>
+
+

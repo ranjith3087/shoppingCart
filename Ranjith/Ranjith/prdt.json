@@ -1,0 +1,12 @@
+{
+	"ListOfPrdts": {
+		"allprdts":[{"code":"TV001", "name":"samsung TV", "price":30000, "description":"42 inch 3D LED TV"},
+		{"code":"TV002", "name":"washing machine", "price":45000, "description":"6 ton washing machine"},
+		{"code":"TV003", "name":"motoG", "price":20000, "description":"5.5 inch screen mobile"},
+		{"code":"TV005", "name":"sony TV", "price":90000, "description":"42 inch 3D Curve TV"},
+		{"code":"TV004", "name":"lG Tv", "price":100000, "description":"40 inch 5D Curve TV"},
+		{"code":"TV007", "name":"Oven", "price":8000, "description":"Used for heating purpose"},
+		{"code":"TV006", "name":"Dell Tv", "price":78900, "description":"TV manufactured by dell"}]
+	}
+}
+

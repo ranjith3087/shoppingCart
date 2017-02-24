@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body class="container-fluid col-md-offset-1 col-md-10 col-md-offset-1" ng-app="ShoppingApp">
+<h3 class="well" ng-bind-html="appheading"></h3>
+
+<nav class="nav navbar-default">
+	<ul class="nav navbar-nav">
+		<li><a href="#home">HOME</a></li>
+		<li><a href="#direc">Directive</a></li>
+		<li><a href="#allprdt">All Products</a></li>
+		<li><a href="#shop">Shopping</a></li>
+		<li><a href="#newprdt">New Product</a></li>
+	</ul>
+</nav>
+<div ng-view></div>
+
+<script src="js/angular.1.4.js"></script>
+<script src="js/angular-sanitize.js"></script>
+<script src="js/angular-messages.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/services.js"></script>
+<script src="js/intializer.js"></script>
+<script src="js/shoppingAppCntroller.js"></script>
+<script src="js/addprdt.js"></script>
+
+</html>

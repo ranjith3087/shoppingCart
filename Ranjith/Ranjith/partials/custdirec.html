@@ -1,0 +1,12 @@
+<div class="col-md-12">
+ <h3>Base content</h3>
+ 	<label>First name: <input type="text" ng-model="firstName"/></label><br />
+    <label>Last name: <input type="text" ng-model="lastName"/></label><br />
+    <br />
+    <strong>First name:</strong> {{firstName}}<br />
+    <strong>Last name:</strong> {{lastName}}
+   <h3>Common scope </h3>
+   <my-cust-direct iso-first-name="firstName" iso-last-name="lastName" 
+   callupdaten="updateName()"></my-cust-direct>
+
+</div>
