@@ -18,7 +18,7 @@ shoppingCart.config(function($routeProvider, gettokenProvider){
 	.when('/home', {
 		template:'<div>this is home page - {{welcomemessage}}</div>',
 		controller:function($scope){
-			$scope.welcomemessage = "Hello varun and ranjith"
+			$scope.welcomemessage = "Hey there...! This is my shopping cart"
 		}
 	})
 	.when('/direc', {
